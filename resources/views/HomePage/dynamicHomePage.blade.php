@@ -1,4 +1,5 @@
 @extends('layouts.webSite')
+@section('title','Home Page')
 @section('content')
     <!-- about-section -->
     <!-- Hero Area Start -->
@@ -1791,8 +1792,7 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="vacationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-hidden="true">
+    <div class="modal fade" id="vacationModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content border-0 shadow-lg">
 
@@ -1919,8 +1919,8 @@
             // Auto-open modal after 200ms
             setTimeout(() => {
                 new bootstrap.Modal(document.getElementById('vacationModal'), {
-                    backdrop: 'static',
-                    keyboard: false
+                    backdrop: true,
+                    keyboard: true
                 }).show();
             }, 10000);
 

@@ -2457,6 +2457,13 @@
             pointer-events: all !important;
         }
 
+        .modal-backdrop.show {
+            opacity: 0 !important;
+            pointer-events: auto;
+        }
+        .modal-backdrop{
+            z-index:1 !important;
+        }
         /* Prevent sidebar from blocking close button */
         @media (min-width: 992px) {
             .col-lg-5 {
@@ -2468,12 +2475,6 @@
                 position: relative;
                 z-index: 2;
             }
-        }
-
-        /* Remove backdrop (your original style) */
-        .modal-backdrop {
-            height: 0;
-            width: 0;
         }
 
         .modal-custom-header {
