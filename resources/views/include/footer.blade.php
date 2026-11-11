@@ -144,26 +144,12 @@ $destinations = DestinationsModel::where('status', '1')->get();
                         </a>
                     @endif
 
-                    @if(isset($webElements['pinterest_link']))
-                        <a href="{{ url(strip_tags($webElements['pinterest_link'])) }}" target="_blank"
-                            aria-label="Pinterest">
-                            <i class="fab fa-pinterest-p"></i>
-                        </a>
-                    @else
-                        <a href="YOUR_STATIC_PINTEREST_URL" target="_blank" aria-label="Pinterest">
-                            <i class="fab fa-pinterest-p"></i>
+                    @if(isset($webElements['linkedin_link']))
+                        <a href="{{ url(strip_tags($webElements['linkedin_link'])) }}" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     @endif
-
-                    {{-- @if(isset($webElements['linkedin_link']))
-                    <a href="{!! $webElements['linkedin_link'] !!}" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    @else
-                    <a href="YOUR_STATIC_LINKEDIN_URL" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    @endif --}}
 
                 </div>
             </div>
