@@ -42,6 +42,7 @@ class HomePageController extends Controller
             $getPackages = (new PackageMasterController())->getActivePackages();
             $packageCategory = (new PackageCategoryController())->getActivePackagesCategoryData();
             $webElements = getWebsiteElements();
+            $Logo = $webElements['Logo'] ?? null;
             $packages = PackageMaster::where(PackageMaster::STATUS, "1")->get();
             $destinations = PackageMaster::distinct()->pluck('package_country')->toArray();
             $travelCategories = PackageMaster::distinct()->pluck('package_type')->toArray();
@@ -78,7 +79,8 @@ class HomePageController extends Controller
                     'testimonials',
                     'activities',
                     'services',
-                    'webElements'
+                    'webElements',
+                    'Logo'
                 )
             );
 
