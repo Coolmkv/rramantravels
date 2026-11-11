@@ -341,7 +341,7 @@
                                         <a href="{{ route('destinationDetailpage', ['destination_slug' => $item->destination_slug]) }}"
                                             class="theme-btn style-two style-three">
                                             <span data-hover="Book Now text-center">View More</span>
-                                            <i class="fal fa-arrow-right"></i>
+                                            <i class="fa fa-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -379,7 +379,7 @@
                                     <!-- <span class="price"><span>$58.00</span>/person</span> -->
                                     <a href="{{ route('tourpage') }}" class="theme-btn style-two style-three">
                                         <span data-hover="Book Now text-center">View More</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
@@ -415,7 +415,7 @@
                                     <!-- <span class="price"><span>$58.00</span>/person</span> -->
                                     <a href="{{ route('tourpage') }}" class="theme-btn style-two style-three">
                                         <span data-hover="Book Now">View More</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
@@ -451,7 +451,7 @@
                                     <!-- <span class="price"><span>$58.00</span>/person</span> -->
                                     <a href="{{ route('tourpage') }}" class="theme-btn style-two style-three">
                                         <span data-hover="Book Now">View More</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
@@ -487,7 +487,7 @@
                                     <!-- <span class="price"><span>$58.00</span>/person</span> -->
                                     <a href="{{ route('tourpage') }}" class="theme-btn style-two style-three">
                                         <span data-hover="Book Now">View More</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
@@ -523,7 +523,7 @@
                                     <!-- <span class="price"><span>$58.00</span>/person</span> -->
                                     <a href="{{ route('tourpage') }}" class="theme-btn style-two style-three">
                                         <span data-hover="Book Now">View More</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
@@ -559,7 +559,7 @@
                                     <!-- <span class="price"><span>$58.00</span>/person</span> -->
                                     <a href="{{ route('tourpage') }}" class="theme-btn style-two style-three">
                                         <span data-hover="Book Now">View More</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
@@ -594,7 +594,7 @@
                                             <span class="price"><span>$58.00</span>/person</span>
                                             <a href="tour-details.php" class="theme-btn style-two style-three">
                                                 <span data-hover="Book Now">Book Now</span>
-                                                <i class="fal fa-arrow-right"></i>
+                                                <i class="fa fa-arrow-right"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -627,7 +627,7 @@
                                             <span class="price"><span>$58.00</span>/person</span>
                                             <a href="tour-details.php" class="theme-btn style-two style-three">
                                                 <span data-hover="Book Now">Book Now</span>
-                                                <i class="fal fa-arrow-right"></i>
+                                                <i class="fa fa-arrow-right"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -661,7 +661,7 @@
                                             <span class="price"><span>$58.00</span>/person</span>
                                             <a href="tour-details.php" class="theme-btn style-two style-three">
                                                 <span data-hover="Book Now">Book Now</span>
-                                                <i class="fal fa-arrow-right"></i>
+                                                <i class="fa fa-arrow-right"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -705,7 +705,7 @@
                             <div class="col-lg-3 text-xl-end">
                                 <a href="tour-list.php" class="theme-btn style-four mb-15">
                                     <span data-hover="Explore More Hotel">Explore More Hotel</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -824,7 +824,7 @@
                                         <input id="news-email" type="email" placeholder="Email Address" required>
                                         <button type="submit" class="theme-btn bgc-secondary style-two">
                                             <span data-hover="Subscribe">Subscribe</span>
-                                            <i class="fal fa-arrow-right"></i>
+                                            <i class="fa fa-arrow-right"></i>
                                         </button>
                                     </form>
                                     <p>No credit card requirement. No commitments</p>

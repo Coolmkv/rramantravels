@@ -141,7 +141,7 @@
                         </p>
                         <a href="{{ route('destinationpage') }}" class="theme-btn mt-25 style-two">
                             <span data-hover="Explore Destinations">Explore Attractions</span>
-                            <i class="fal fa-arrow-right"></i>
+                            <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
                     {{-- <div class="destination-details-content rmb-55" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="50">
@@ -153,7 +153,7 @@
                             <p>The island's rich cultural heritage is evident in numerous temples, including the iconic Tanah Lot and Uluwatu Temple, as well as the cultural</p>
                             <a href="{{ route('tourpage') }}" class="theme-btn mt-25 style-two">
                                 <span data-hover="Explore Destinations">Explore Destinations</span>
-                                <i class="fal fa-arrow-right"></i>
+                                <i class="fa fa-arrow-right"></i>
                             </a>
                         </div> --}}
                 </div>
@@ -533,7 +533,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 </div>
                                 <a href="tour-details.php" class="theme-btn style-three">
                                     <span data-hover="Explore">Explore</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -559,7 +559,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 </div>
                                 <a href="tour-details.php" class="theme-btn style-three">
                                     <span data-hover="Explore">Explore</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -586,7 +586,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 </div>
                                 <a href="tour-details.php" class="theme-btn style-three">
                                     <span data-hover="Explore">Explore</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -612,7 +612,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 </div>
                                 <a href="tour-details.php" class="theme-btn style-three">
                                     <span data-hover="Explore">Explore</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -776,7 +776,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <h2>Explore the world best tourism</h2>
                                 <a href="tour-details.php" class="theme-btn style-two bgc-secondary">
                                     <span data-hover="Explore Tours">Explore Tours</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -786,7 +786,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <h2>World largest Sea Beach in Thailand</h2>
                                 <a href="tour-details.php" class="theme-btn style-two">
                                     <span data-hover="Explore Tours">Explore Tours</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -796,7 +796,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <h2>Largest Water falls Bali, Indonesia</h2>
                                 <a href="tour-details.php" class="theme-btn style-two bgc-secondary">
                                     <span data-hover="Explore Tours">Explore Tours</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -819,7 +819,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="col-lg-3 text-xl-end">
                             <a href="tour-list.php" class="theme-btn style-two bgc-secondary mb-15">
                                 <span data-hover="Explore More Hotel">Explore More Hotel</span>
-                                <i class="fal fa-arrow-right"></i>
+                                <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -938,7 +938,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <input id="news-email" type="email" placeholder="Email Address" required>
                                     <button type="submit" class="theme-btn bgc-secondary style-two">
                                         <span data-hover="Subscribe">Subscribe</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </button>
                                 </form>
                                 <p>No credit card requirement. No commitments</p>

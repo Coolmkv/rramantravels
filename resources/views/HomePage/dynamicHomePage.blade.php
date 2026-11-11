@@ -838,7 +838,7 @@
                         <div class="menu-btns py-10">
                             <a href="#" class="theme-btn style-two bgc-secondary">
                                 <span data-hover="Book Now">Read More</span>
-                                <i class="fal fa-arrow-right"></i>
+                                <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -4307,9 +4307,9 @@
                                             <a style="color:black;text-decoration:none" href="tel:9899088497">9899088497</a>
                                         </p>
                                     @endif
-
+                                        
                                     <div class="mt-3">
-                                        <a href="https://wa.me/+91{!! $whatsapp_footer_link ?? '7838602000' !!}?text=Hi!%20I%20want%20to%20plan%20a%20vacation"
+                                        <a href="{!! $webElements["whatsapp_footer_link"] ?? '#' !!}"
                                             target="_blank" aria-label="WhatsApp">
                                             <img src="{{ asset('./assets/images/whatsapp.png') }}" alt="WhatsApp"
                                                 height="50" width="50">

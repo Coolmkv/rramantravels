@@ -155,7 +155,7 @@
                                         </ul>
                                         <button type="submit" class="theme-btn style-two">
                                             <span data-hover="Send Comments">Send Comments</span>
-                                            <i class="fal fa-arrow-right"></i>
+                                            <i class="fa fa-arrow-right"></i>
                                         </button>
                                     </div>
                                 </div>

@@ -48,7 +48,7 @@
                         <div class="menu-btns py-10">
                             <a href="contact.php" class="theme-btn style-two bgc-secondary">
                                 <span data-hover="Book Now">Book Now</span>
-                                <i class="fal fa-arrow-right"></i>
+                                <i class="fa fa-arrow-right"></i>
                             </a>
                             <!-- menu sidbar -->
                             <div class="menu-sidebar">

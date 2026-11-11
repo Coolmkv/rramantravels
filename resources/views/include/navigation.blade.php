@@ -88,7 +88,7 @@
                 <div class="menu-btns py-10">
                     <a href="{{ url('contact-us') }}" class="theme-btn style-two bgc-secondary">
                         <span data-hover="Book Now">Book Now</span>
-                        <i class="fal fa-arrow-right"></i>
+                        <i class="fa fa-arrow-right"></i>
                     </a>
 
                     <div class="language-switcher-custom notranslate">

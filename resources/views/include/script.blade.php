@@ -16,12 +16,12 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
 
-<a class="footer-whatsapp" aria-label="Whatsapp Button"
-    href="https://wa.me/+91{!! $whatsapp_footer_link ?? '7838602000' !!}?text=Let%27s+start+build+a+project"><img
+<a class="footer-whatsapp" aria-label="Whatsapp Button" target="_blank"
+    href="{!! $webElements["whatsapp_footer_link"] ?? '#' !!}"><img
         src="{{ asset('./assets/images/whatsapp.png') }}" alt="Whatsapp" class="img-fluid" height=""
         width="150"></a>
 <a class="footer-whatsapp footer-call" aria-label="Phone Call Button"
-    href="tel:+91{{ isset($phone_footer_link) ? str_replace(' ', '', $phone_footer_link) : '7838602000' }}"><img
+    href="tel:91{{ isset($webElements["phone_footer_link"]) ? str_replace(' ', '', $webElements["phone_footer_link"]) : '7838602000' }}"><img
         src="{{ asset('./assets/images/phone-call.png') }}" alt="Phone Call" class="img-fluid" height=""
         width="150"></a>
 

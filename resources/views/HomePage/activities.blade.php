@@ -373,7 +373,7 @@ h2::after {
                                 <div class="destination-footers">
                                     <a href="{{ route('activitiesDetailpage', ['slug' => $item->slug]) }}" class="theme-btn style-two style-three">
                                         <span data-hover="View More">View More</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>

@@ -124,7 +124,7 @@
                     </p>
                     <a href="{{ route('activitiespage') }}" class="theme-btn mt-25 style-two">
                         <span data-hover="Explore Activities">Explore Activities</span>
-                        <i class="fal fa-arrow-right"></i>
+                        <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -464,7 +464,7 @@ Our Attractions
                                 </div>
                                 <a href="tour-details.php" class="theme-btn style-three">
                                     <span data-hover="Explore">Explore</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -490,7 +490,7 @@ Our Attractions
                                 </div>
                                 <a href="tour-details.php" class="theme-btn style-three">
                                     <span data-hover="Explore">Explore</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -517,7 +517,7 @@ Our Attractions
                                 </div>
                                 <a href="tour-details.php" class="theme-btn style-three">
                                     <span data-hover="Explore">Explore</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -543,7 +543,7 @@ Our Attractions
                                 </div>
                                 <a href="tour-details.php" class="theme-btn style-three">
                                     <span data-hover="Explore">Explore</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -707,7 +707,7 @@ Our Attractions
                                 <h2>Explore the world best tourism</h2>
                                 <a href="tour-details.php" class="theme-btn style-two bgc-secondary">
                                     <span data-hover="Explore Tours">Explore Tours</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -717,7 +717,7 @@ Our Attractions
                                 <h2>World largest Sea Beach in Thailand</h2>
                                 <a href="tour-details.php" class="theme-btn style-two">
                                     <span data-hover="Explore Tours">Explore Tours</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -727,7 +727,7 @@ Our Attractions
                                 <h2>Largest Water falls Bali, Indonesia</h2>
                                 <a href="tour-details.php" class="theme-btn style-two bgc-secondary">
                                     <span data-hover="Explore Tours">Explore Tours</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -750,7 +750,7 @@ Our Attractions
                         <div class="col-lg-3 text-xl-end">
                             <a href="tour-list.php" class="theme-btn style-two bgc-secondary mb-15">
                                 <span data-hover="Explore More Hotel">Explore More Hotel</span>
-                                <i class="fal fa-arrow-right"></i>
+                                <i class="fa fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
@@ -869,7 +869,7 @@ Our Attractions
                                     <input id="news-email" type="email" placeholder="Email Address" required>
                                     <button type="submit" class="theme-btn bgc-secondary style-two">
                                         <span data-hover="Subscribe">Subscribe</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </button>
                                 </form>
                                 <p>No credit card requirement. No commitments</p>

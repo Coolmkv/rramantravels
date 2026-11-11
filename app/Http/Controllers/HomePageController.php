@@ -616,6 +616,9 @@ class HomePageController extends Controller
         $data = [];
         if (!empty($elements)) {
             foreach ($elements as $item) {
+                if($item->{WebSiteElements::ELEMENT_TYPE} == 'Text'){
+                    $item->{WebSiteElements::ELEMENT_DETAILS} = trim(strip_tags($item->{WebSiteElements::ELEMENT_DETAILS}));
+                }
                 $key = $item->{WebSiteElements::ELEMENT};
                 $value = $item->{WebSiteElements::ELEMENT_DETAILS};
 

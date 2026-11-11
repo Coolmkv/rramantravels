@@ -71,7 +71,7 @@
                                     {{-- <p>We specialize in crafting unforgettable city experiences for travelers seeking</p> --}}
                                     <a href="{{ route('blogDetailpage', ['slug' => $item->slug]) }}" class="theme-btn style-two style-three">
                                         <span data-hover="Book Now" class="read">Read More</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                                 <p>We specialize in crafting unforgettable city experiences for travelers seeking</p>
                                 <a href="{{ route('blogpage') }}" class="theme-btn style-two style-three">
                                     <span data-hover="Book Now">Read More</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                                 <p>We specialize in crafting unforgettable city experiences for travelers seeking</p>
                                 <a href="{{ route('blogpage') }}" class="theme-btn style-two style-three">
                                     <span data-hover="Book Now">Read More</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                                 <p>We specialize in crafting unforgettable city experiences for travelers seeking</p>
                                 <a href="{{ route('blogpage') }}" class="theme-btn style-two style-three">
                                     <span data-hover="Book Now">Read More</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -146,7 +146,7 @@
                                     <p>We specialize in crafting unforgettable city experiences for travelers seeking</p>
                                     <a href="{{ route('blogpage') }}" class="theme-btn style-two style-three">
                                         <span data-hover="Book Now">Read More</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div> -->
@@ -317,7 +317,7 @@
                                 <h3>Best Tourist Place</h3>
                                 <a href="{{ route('tourpage') }}" class="theme-btn style-two bgc-secondary">
                                     <span data-hover="Explore Now">Explore Now</span>
-                                    <i class="fal fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
                                 </a>
                             </div>
                             <div class="image">

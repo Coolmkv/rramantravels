@@ -132,7 +132,7 @@
                                 <div class="col-md-12">
                                     <button id="submitButtons" type="submit" class="theme-btn style-two">
                                         <span data-hover="Send Comments">Submit</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </button>
                                 </div>
                             </div>

@@ -75,7 +75,7 @@
                 <div class="gallery-more-btn">
                     <a href="{{ route(name: 'contactUs') }}" class="theme-btn style-two bgc-secondary">
                         <span data-hover="See All Photos">See All Photos</span>
-                        <i class="fal fa-arrow-right"></i>
+                        <i class="fa fa-arrow-right"></i>
                     </a>
                 </div>
             </div> --}}
@@ -597,7 +597,7 @@
                                 <div class="form-group mb-0">
                                     <button type="submit" class="theme-btn bgc-secondary style-two">
                                         <span data-hover="Submit reviews">Submit reviews</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </button>
                                 </div>
                             </div>
@@ -667,7 +667,7 @@
                                         <h6>Total: <span class="price">$74</span></h6>
                                         <button type="submit" class="theme-btn style-two w-100 mt-15 mb-5">
                                             <span data-hover="Book Now">Book Now</span>
-                                            <i class="fal fa-arrow-right"></i>
+                                            <i class="fa fa-arrow-right"></i>
                                         </button>
                                         <div class="text-center">
                                             <a href="contact.php">Need some help?</a>
@@ -1334,7 +1334,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <input id="news-email" type="email" placeholder="Email Address" required>
                                     <button type="submit" class="theme-btn bgc-secondary style-two">
                                         <span data-hover="Subscribe">Subscribe</span>
-                                        <i class="fal fa-arrow-right"></i>
+                                        <i class="fa fa-arrow-right"></i>
                                     </button>
                                 </form>
                                 <p>No credit card requirement. No commitments</p>

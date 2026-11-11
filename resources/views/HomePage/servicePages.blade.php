@@ -748,7 +748,7 @@
                         <input id="news-email" type="email" placeholder="Email Address" required>
                         <button type="submit" class="theme-btn bgc-secondary style-two">
                             <span data-hover="Subscribe">Subscribe</span>
-                            <i class="fal fa-arrow-right"></i>
+                            <i class="fa fa-arrow-right"></i>
                         </button>
                     </form>
                     <p>No credit card requirement. No commitments</p>
