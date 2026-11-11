@@ -36,9 +36,7 @@ use Inertia\Inertia;
 // });
 
 Route::get("/",[HomePageController::class,"homePage"]);
-// Route::get("comingsoon",[HomePageController::class,function(){
-//     return view("HomePage.ComingSoon");
-// }]);
+
 
 Route::get("comingsoon",[HomePageController::class,"ComingSoon"])->name("ComingSoon");
 Route::get("about-us",[HomePageController::class,"aboutUs"])->name("aboutUs");

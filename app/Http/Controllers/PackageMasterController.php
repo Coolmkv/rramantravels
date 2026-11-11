@@ -68,9 +68,17 @@ $allActivities = ActivitiesModel::pluck('activity_name')->toArray();
         DB::beginTransaction();
 
         // Determine if this is a new or existing package
-        $newPackage = $request->input(PackageMaster::ID)
-            ? PackageMaster::find($request->input(PackageMaster::ID))
-            : new PackageMaster();
+        $packageId = $request->input(PackageMaster::ID);
+        $newPackage = $packageId ? PackageMaster::find($packageId) : new PackageMaster();
+
+        if ($packageId && !$newPackage) {
+            DB::rollBack();
+            return response()->json([
+                "status" => false,
+                "message" => "Package not found.",
+                "data" => null
+            ]);
+        }
 
         // Handle image upload
         $images = [];
@@ -158,6 +166,10 @@ $allActivities = ActivitiesModel::pluck('activity_name')->toArray();
         [PackageMaster::ID, $id],
         [PackageMaster::STATUS, 1]
     ])->with("itinerary", "itinerary.city")->first();
+
+    if (!$packageData) {
+        abort(404, "Package not found.");
+    }
 
     $package_types = PackageMaster::PACKAGE_TYPES;
     $city_master = CityMaster::where(CityMaster::STATUS, 1)->get([CityMaster::CITY_NAME, CityMaster::ID]);

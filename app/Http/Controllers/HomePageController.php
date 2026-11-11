@@ -32,12 +32,12 @@ class HomePageController extends Controller
             // Existing data fetching
             $sliders = SliderModel::where([
                 [SliderModel::SLIDE_STATUS, SliderModel::SLIDE_STATUS_LIVE],
-                [SliderModel::SLIDE_STATUS, 1]
+                [SliderModel::STATUS, 1]
             ])->orderBy(SliderModel::SLIDE_SORTING, "desc")->get();
 
             $getPackages = (new PackageMasterController())->getActivePackages();
             $packageCategory = (new PackageCategoryController())->getActivePackagesCategoryData();
-            $data = $this->getElement();
+            $webElements = getWebsiteElements();
             $packages = PackageMaster::where(PackageMaster::STATUS, "1")->get();
             $destinations = PackageMaster::distinct()->pluck('package_country')->toArray();
             $travelCategories = PackageMaster::distinct()->pluck('package_type')->toArray();
@@ -73,9 +73,9 @@ class HomePageController extends Controller
                     'homedestinations',
                     'testimonials',
                     'activities',
-                    'services'
-                ),
-                $data
+                    'services',
+                    'webElements'
+                )
             );
 
         } catch (Exception $exception) {

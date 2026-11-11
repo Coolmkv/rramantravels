@@ -1,27 +1,7 @@
 <?php
-// This is the model you would use to fetch data.
-// Make sure this path is correct based on your application structure.
-use App\Models\WebSiteElements;
 use App\Models\DestinationsModel;
 
-// Fetch the necessary web elements directly within the Blade file.
-// This is a simplified way to get key-value pairs from the database.
-$webElements = WebSiteElements::whereIn('element', [
-    'Email',
-    'Phone_number',
-    'Address',
-    'Logo',
-    'footer_content',
-    'whatsapp_footer_link',
-    'phone_footer_link',
-    "facebook_link",
-    "youtube_link",
-    "pinterest_link", // ✅ Pinterest link added
-    "linkedin_link",  // ✅ LinkedIn link added
-    "insta_link",
-])
-    ->pluck('element_details', 'element')
-    ->toArray();
+$webElements = getWebsiteElements();
 
 $destinations = DestinationsModel::where('status', '1')->get();
 
@@ -31,11 +11,22 @@ $destinations = DestinationsModel::where('status', '1')->get();
     <div class="container-fluid">
         <div class="row footer-top">
             <div class="col-lg-3 col-md-6 col-sm-12 footer-section logo-section">
-                @if(isset($webElements['Logo']))
-                    <img src="{{ asset('website/uploads/WesiteElements/' . $webElements['Logo']) }}"
+                @php
+    $footerLogo = $webElements['Logo'] ?? null;
+    $footerLogoUrl = $footerLogo
+        ? (
+            \Illuminate\Support\Str::startsWith($footerLogo, ['http://', 'https://'])
+                ? $footerLogo
+                : asset(ltrim($footerLogo, '/'))
+        )
+        : asset('assets/images/logo1.png');
+@endphp
+
+@if(!empty($footerLogo))
+                    <img src="{{ $footerLogoUrl }}"
                         style="height:150px;width:150px;" alt="Logo">
                 @else
-                    <img src="/assets/images/logo1.png" style="height:150px;width:150px;" alt="Logo">
+                    <img src="{{ $footerLogoUrl }}" style="height:150px;width:150px;" alt="Logo">
                 @endif
                 <p>Where devotion meets ocean waves and hearts.</p>
                 <label for="enquiry" class="btn-enquire">ENQUIRE NOW</label>
@@ -92,7 +83,9 @@ $destinations = DestinationsModel::where('status', '1')->get();
                 @endif
 
                 {{-- Dynamic Phone Number with static fallback --}}
+                            
                 @if(isset($webElements['Phone_number1']))
+
                     <p>
                         <i class="fas fa-phone"></i>
                         <strong>Contact No:</strong>

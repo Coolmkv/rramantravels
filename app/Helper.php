@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomePageController;
+
 if(!function_exists('IND_money_format')){
     function IND_money_format($number){    	
         $decimal = (string)($number - floor($number));
@@ -24,5 +26,11 @@ if(!function_exists('IND_money_format')){
         }
 
         return $result;
+    }
+}
+
+if(!function_exists('getWebsiteElements')){
+    function getWebsiteElements(){
+        return (new HomePageController())->getElement();
     }
 }

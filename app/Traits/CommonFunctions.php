@@ -15,12 +15,14 @@ use Illuminate\Foundation\Http\FormRequest;
 trait CommonFunctions{
 
     public function reportException(Exception $exception){
-        dd([
-            "message"=>$exception->getMessage(),
-            "File"=>$exception->getFile(),
-            "Code"=>$exception->getCode(),
-            "Trace as string"=>$exception->getTraceAsString()
-        ]);
+        report($exception);
+
+        return [
+            "message" => $exception->getMessage(),
+            "File" => $exception->getFile(),
+            "Code" => $exception->getCode(),
+            "Trace as string" => $exception->getTraceAsString()
+        ];
     }
 
     public function uploadLocalFile(FormRequest $fileObject,$key_name,$upload_path,$file_name = "",int $height = null,int $width = null):array{
