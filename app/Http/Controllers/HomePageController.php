@@ -33,7 +33,11 @@ class HomePageController extends Controller
             $sliders = SliderModel::where([
                 [SliderModel::SLIDE_STATUS, SliderModel::SLIDE_STATUS_LIVE],
                 [SliderModel::STATUS, 1]
-            ])->orderBy(SliderModel::SLIDE_SORTING, "desc")->get();
+            ])
+                ->whereNotNull(SliderModel::IMAGE)
+                ->where(SliderModel::IMAGE, '<>', '')
+                ->orderBy(SliderModel::SLIDE_SORTING, "desc")
+                ->get();
 
             $getPackages = (new PackageMasterController())->getActivePackages();
             $packageCategory = (new PackageCategoryController())->getActivePackagesCategoryData();

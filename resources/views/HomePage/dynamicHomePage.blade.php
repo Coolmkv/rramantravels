@@ -36,6 +36,42 @@
             pointer-events: none;
         }
 
+        .home-slide {
+            position: absolute;
+            inset: 0;
+            background-position: center;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 700ms ease;
+        }
+
+        .home-slide.active {
+            opacity: 1;
+        }
+
+        .home-slide::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, .5), transparent 75%);
+        }
+
+        .home-slide-copy {
+            position: absolute;
+            z-index: 1;
+            top: 35%;
+            left: max(5%, calc((100% - 1300px) / 2));
+            max-width: 700px;
+            color: #fff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, .65);
+        }
+
+        .home-slide-copy h1,
+        .home-slide-copy h2,
+        .home-slide-copy p {
+            color: inherit;
+        }
+
         /* Hero Content Overlay */
         .hero-content {
             position: absolute;
@@ -199,12 +235,36 @@
 
     <!-- Hero Section with Overlay Form -->
     <section class="hero-section">
-        <div class="video-background">
-            <iframe
-                src="https://www.youtube.com/embed/_gu9BwQ1Ags?autoplay=1&mute=1&loop=1&playlist=_gu9BwQ1Ags&controls=0&modestbranding=1&fs=0&rel=0"
-                title="Background Video" allow="autoplay; encrypted-media" allowfullscreen style="pointer-events: none;">
-            </iframe>
-        </div>
+        @if($sliders->isNotEmpty())
+            <div class="home-slides" aria-label="Featured travel slides">
+                @foreach($sliders as $index => $slide)
+                    <div class="home-slide {{ $index === 0 ? 'active' : '' }}"
+                        style="background-image: url('{{ asset(ltrim($slide->image, '/')) }}')"
+                        aria-hidden="{{ $index === 0 ? 'false' : 'true' }}">
+                        @if($slide->heading_top || $slide->heading_middle || $slide->heading_bottom)
+                            <div class="home-slide-copy">
+                                @if($slide->heading_top)
+                                    <p>{{ $slide->heading_top }}</p>
+                                @endif
+                                @if($slide->heading_middle)
+                                    <h1>{{ $slide->heading_middle }}</h1>
+                                @endif
+                                @if($slide->heading_bottom)
+                                    <p>{{ $slide->heading_bottom }}</p>
+                                @endif
+                            </div>
+                        @endif
+                    </div>
+                @endforeach
+            </div>
+        @else
+            <div class="video-background">
+                <iframe
+                    src="https://www.youtube.com/embed/_gu9BwQ1Ags?autoplay=1&mute=1&loop=1&playlist=_gu9BwQ1Ags&controls=0&modestbranding=1&fs=0&rel=0"
+                    title="Background Video" allow="autoplay; encrypted-media" allowfullscreen style="pointer-events: none;">
+                </iframe>
+            </div>
+        @endif
 
         <div class="hero-content">
             <form class="search-form" action="{{ route('query.submit') }}" method="POST" style="padding-bottom:30px;">
@@ -235,6 +295,23 @@
             </form>
         </div>
     </section>
+
+    @if($sliders->count() > 1)
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const slides = document.querySelectorAll('.home-slide');
+                let activeIndex = 0;
+
+                window.setInterval(function () {
+                    slides[activeIndex].classList.remove('active');
+                    slides[activeIndex].setAttribute('aria-hidden', 'true');
+                    activeIndex = (activeIndex + 1) % slides.length;
+                    slides[activeIndex].classList.add('active');
+                    slides[activeIndex].setAttribute('aria-hidden', 'false');
+                }, 5000);
+            });
+        </script>
+    @endif
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
