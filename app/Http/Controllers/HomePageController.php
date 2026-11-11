@@ -616,7 +616,14 @@ class HomePageController extends Controller
         $data = [];
         if (!empty($elements)) {
             foreach ($elements as $item) {
-                $data[$item->{WebSiteElements::ELEMENT}] = $item->{WebSiteElements::ELEMENT_DETAILS};
+                $key = $item->{WebSiteElements::ELEMENT};
+                $value = $item->{WebSiteElements::ELEMENT_DETAILS};
+
+                if ($key === 'Map_link') {
+                    $value = trim(strip_tags($value));
+                }
+
+                $data[$key] = $value;
             }
         }
         return $data;
