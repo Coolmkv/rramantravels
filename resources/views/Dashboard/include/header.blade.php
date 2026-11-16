@@ -10,7 +10,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-   <link rel="icon" href="assets/images/logo1.png" type="image/png" />
+   <link rel="icon" href="{{ $adminLogoUrl }}" type="image/png" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

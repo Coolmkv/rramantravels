@@ -134,7 +134,7 @@
         }
 
         .search-btn {
-            background: #F1C40F;
+            background: #B99551;
             color: black;
             border: none;
             border-radius: 30px;
@@ -148,7 +148,7 @@
         }
 
         .search-btn:hover {
-            background: #43a047;
+            background: #0F5B56;
             color: #fff;
         }
 
@@ -355,7 +355,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: #F1C40F;
+            background: #0F5B56;
             color: white;
             padding: 15px 30px;
             border-radius: 50px;
@@ -375,7 +375,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: #F1C40F;
+            background: #B99551;
             transition: left 0.5s ease;
         }
 
@@ -863,7 +863,7 @@
 
         .destination-item {
             position: relative;
-            background: #F1C40F;
+            background: #F8F6F0;
             border-radius: 20px;
             overflow: hidden;
             backdrop-filter: blur(10px);
@@ -1001,7 +1001,7 @@
 
         .theme-btn {
             position: relative;
-            background: #F1C40F;
+            background: #0F5B56;
             border: none;
             padding: 15px 40px;
             border-radius: 50px;
@@ -1510,7 +1510,7 @@
         }
 
         #travel-gallery .action-button {
-            background: #F1C40F;
+            background: #0F5B56;
             color: white;
             padding: 12px 25px;
             border-radius: 25px;
@@ -1573,12 +1573,12 @@
         }
 
         :root {
-            --primary-orange: #FF6B35;
-            --secondary-orange: #FF8C42;
-            --light-orange: #FFF4F0;
-            --dark-orange: #E55A2B;
-            --gradient-orange: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
-            --shadow-color: rgba(255, 107, 53, 0.15);
+            --primary-orange: #0F5B56;
+            --secondary-orange: #B99551;
+            --light-orange: #F8F6F0;
+            --dark-orange: #123F3D;
+            --gradient-orange: linear-gradient(135deg, #0F5B56 0%, #B99551 100%);
+            --shadow-color: rgba(15, 91, 86, 0.15);
         }
 
         .why-choose-section {
@@ -2125,8 +2125,8 @@
         }
 
         :root {
-            --primary-orange: #ff6b35;
-            --gradient-orange: linear-gradient(135deg, #ff6b35, #f7931e);
+            --primary-orange: #0F5B56;
+            --gradient-orange: linear-gradient(135deg, #0F5B56, #B99551);
         }
 
         #blogSlider {
@@ -2135,7 +2135,7 @@
         }
 
         .blog-card {
-            background: #F1C40F;
+            background: #F8F6F0;
             border-radius: 12px;
             overflow: hidden;
             box-shadow:
@@ -2483,7 +2483,7 @@
         }
 
         .sidebar-info {
-            background: #F1C40F;
+            background: #B99551;
             color: black;
             border-radius: 10px;
             padding: 1.5rem;
@@ -2511,8 +2511,8 @@
 
 
         .step-number {
-            background: white;
-            color: #1e3a8a;
+            background: #F8F6F0;
+            color: #123F3D;
             width: 35px;
             height: 35px;
             border-radius: 50%;

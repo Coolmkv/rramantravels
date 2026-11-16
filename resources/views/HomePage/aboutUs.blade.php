@@ -49,14 +49,14 @@
        </div>   
             <div class="container pt-5" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
                 <h2 class="text-center">About Us</h2>
-           <p style="text-align:justify">Welcome to odishavoyages.com, your ultimate guide to exploring the vibrant state of Odisha. We are passionate about showcasing the cultural richness, spiritual heritage, and natural beauty of this incredible region. From the majestic Sun Temple of Konark and the sacred Jagannath Temple in Puri to the serene waters
+           <p style="text-align:justify">Welcome to rramantravels.com, your ultimate guide to exploring the vibrant state of Odisha. We are passionate about showcasing the cultural richness, spiritual heritage, and natural beauty of this incredible region. From the majestic Sun Temple of Konark and the sacred Jagannath Temple in Puri to the serene waters
              of Chilika Lake and the lush greenery of Daringbadi, we bring you curated travel
               experiences that combine history, adventure, and relaxation.</p>
 
 <p style="text-align:justify">Our mission is to make your journey through Odisha seamless, memorable, and enriching. We offer carefully crafted travel packages, expert local guidance, and insider tips to help you discover hidden gems, participate in traditional 
   festivals, and experience authentic Odia culture.
    Whether you are a history enthusiast, nature lover, spiritual seeker, or simply looking for a peaceful getaway,
-   odishavoyages.com is here to turn your Odisha dreams into reality.</p>
+   rramantravels.com is here to turn your Odisha dreams into reality.</p>
                 </div>
         </section>
 

@@ -4,12 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class WebSiteElements extends Model
 {
     use HasFactory;
 
     protected $table = "website_elements";
+
+    protected static function booted()
+    {
+        $refreshCache = static function (self $element): void {
+            Cache::forever(
+                'webSiteElements',
+                self::where(self::STATUS, 1)->get()
+            );
+        };
+
+        static::saved($refreshCache);
+        static::deleted($refreshCache);
+    }
 
     const ID = "id";
     const ELEMENT = "element";

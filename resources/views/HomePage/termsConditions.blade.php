@@ -147,8 +147,8 @@
         <h1>Terms & Conditions</h1>
 
         <h2>1. Acceptance of Terms</h2>
-        <p>By accessing or using <strong><a href="https://odishavoyages.com/"
-                    style="color:orange">odishavoyages.com</a></strong>, you agree to follow
+        <p>By accessing or using <strong><a href="https://rramantravels.com/"
+                    style="color:orange">rramantravels.com</a></strong>, you agree to follow
             these terms.</p>
 
         <h2>2. Use of Content</h2>
@@ -160,8 +160,8 @@
             notice.</p>
 
         <h2>4. Liability</h2>
-        <p>While we provide travel guidance and assistance, <strong><a href="https://odishavoyages.com/"
-                    style="color:orange">odishavoyages.com</a></strong> is not responsible
+        <p>While we provide travel guidance and assistance, <strong><a href="https://rramantravels.com/"
+                    style="color:orange">rramantravels.com</a></strong> is not responsible
             for personal accidents, delays, or unforeseen events during travel. Travelers are responsible for their own
             safety and compliance with local laws.</p>
 

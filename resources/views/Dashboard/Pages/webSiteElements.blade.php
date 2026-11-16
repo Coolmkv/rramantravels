@@ -43,6 +43,24 @@
         </x-data-table>
     </x-card-element>    
 </x-content-div>
+
+<div class="modal fade" id="elementDetailsModal" tabindex="-1" aria-labelledby="elementDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="elementDetailsModalLabel">Element Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="elementDetailsImage" class="img-fluid d-none" alt="Element details image">
+                <iframe id="elementDetailsEmbed" class="w-100 d-none" height="450" title="Embedded element preview"
+                    sandbox="allow-scripts allow-forms allow-presentation" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer"></iframe>
+                <div id="elementDetailsText" class="d-none" style="white-space: pre-wrap; overflow-wrap: anywhere;"></div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('script')
@@ -50,6 +68,38 @@
     
     let site_url = '{{ url('/') }}';
     let table="";
+        function getEmbedUrl(details, element) {
+            const parsedDetails = new DOMParser().parseFromString(details || '', 'text/html');
+            const iframeSource = parsedDetails.querySelector('iframe[src]')?.getAttribute('src');
+            const text = (parsedDetails.body.textContent || '').trim();
+            const candidate = iframeSource || (element === 'Map_link' ? text : '');
+
+            if (!candidate) {
+                return null;
+            }
+
+            try {
+                const url = new URL(candidate, window.location.origin);
+                if (!['http:', 'https:'].includes(url.protocol)) {
+                    return null;
+                }
+
+                const host = url.hostname.toLowerCase();
+                const isKnownEmbed = url.pathname.includes('/embed') ||
+                    url.pathname.includes('/video/') ||
+                    url.searchParams.get('output') === 'embed' ||
+                    host === 'youtu.be' ||
+                    (host.includes('google.') && url.pathname.includes('/maps'));
+
+                return iframeSource || element === 'Map_link' || isKnownEmbed ? url.href : null;
+            } catch (error) {
+                if (error instanceof TypeError) {
+                    return null;
+                }
+                throw error;
+            }
+        }
+
         $(function() {
             $('#element_type_text').summernote({
                 placeholder: 'ElementText',
@@ -80,24 +130,29 @@
                     },
                     {
                         data: '{{ \App\Models\WebSiteElements::ELEMENT_DETAILS }}',
-                        render: function(data, type,row) {
-                            let image = '';
-                            if (row.element_type=="Image") {
-
-                                image += '<img alt="Image Link" src="'+site_url + data + '" class="img-thumbnail">';
-                            }else{
-                                // console.log(data);
-                                image = row.element_details;
+                        render: function(data, type, row) {
+                            if (row.element_type === 'Image') {
+                                return '<button type="button" class="view-details btn btn-link btn-sm">View image</button>';
                             }
-                            return image;
+
+                            if (getEmbedUrl(data, row.element)) {
+                                return '<button type="button" class="view-details btn btn-link btn-sm">View details</button>';
+                            }
+
+                            const parsedDetails = new DOMParser().parseFromString(data || '', 'text/html');
+                            const text = parsedDetails.body.innerText || parsedDetails.body.textContent || '';
+                            const words = text.trim().split(/\s+/).filter(Boolean);
+
+                            if (words.length > 100) {
+                                const preview = $('<div>').text(words.slice(0, 100).join(' ') + '...').html();
+                                return preview + ' <button type="button" class="view-details btn btn-link btn-sm">View details</button>';
+                            }
+
+                            return $('<div>').text(text).html();
                         },
                         orderable: false,
                         searchable: false
                     },
-                    // {
-                    //     data: '{{ \App\Models\WebSiteElements::ELEMENT_DETAILS }}',
-                    //     name: '{{ \App\Models\WebSiteElements::ELEMENT_DETAILS }}'
-                    // },
                     {
                         data: 'action',
                         name: 'action',
@@ -105,6 +160,32 @@
                         searchable: false
                     },
                 ]
+            });
+
+            $(document).on('click', '.view-details', function() {
+                const row = table.row($(this).closest('tr')).data();
+                const isImage = row.element_type === 'Image';
+                const embedUrl = !isImage ? getEmbedUrl(row.element_details, row.element) : null;
+                $('#elementDetailsModalLabel').text(row.element + ' Details');
+                $('#elementDetailsImage').toggleClass('d-none', !isImage);
+                $('#elementDetailsEmbed').toggleClass('d-none', isImage || !embedUrl);
+                $('#elementDetailsText').toggleClass('d-none', isImage || Boolean(embedUrl));
+                $('#elementDetailsEmbed').removeAttr('src');
+
+                if (isImage) {
+                    $('#elementDetailsImage').attr('src', site_url + row.element_details);
+                } else if (embedUrl) {
+                    $('#elementDetailsEmbed').attr('src', embedUrl);
+                } else {
+                    const parsedDetails = new DOMParser().parseFromString(row.element_details || '', 'text/html');
+                    $('#elementDetailsText').text(parsedDetails.body.innerText || parsedDetails.body.textContent || '');
+                }
+
+                bootstrap.Modal.getOrCreateInstance(document.getElementById('elementDetailsModal')).show();
+            });
+
+            $('#elementDetailsModal').on('hidden.bs.modal', function() {
+                $('#elementDetailsEmbed').removeAttr('src');
             });
 
         });

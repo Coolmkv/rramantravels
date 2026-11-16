@@ -85,14 +85,12 @@ class WebSiteElementsController extends Controller
                 $check->{WebSiteElements::UPDATED_BY} = Auth::user()->id;
                 $check->{WebSiteElements::STATUS} = 0;
                 $check->save();
-                $this->forgetWebSiteElements();
                 $return = ["status" => true, "message" => "Details updated", "data" => null];
             } else if ($request["action"] == "enable") {
                 $check = WebSiteElements::where(WebSiteElements::ID, $requestData[WebSiteElements::ID])->first();
                 $check->{WebSiteElements::UPDATED_BY} = Auth::user()->id;
                 $check->{WebSiteElements::STATUS} = 1;
                 $check->save();
-                $this->forgetWebSiteElements();
                 $return = ["status" => true, "message" => "Details updated", "data" => null];
             } else {
                 $return = ["status" => false, "message" => "Invalid action", "data" => null];
@@ -123,7 +121,6 @@ class WebSiteElementsController extends Controller
                     $check->{WebSiteElements::ELEMENT_DETAILS} = $requestData["element_details_text"];
                 }
                 $check->save();
-                $this->forgetWebSiteElements();
                 $return = ["status" => true, "message" => "Details updated", "data" => null];
             }
         } else {
@@ -162,7 +159,6 @@ class WebSiteElementsController extends Controller
             } else {
                 $check->{WebSiteElements::ELEMENT_DETAILS} = $requestData["element_details_text"];
             }
-            $this->forgetWebSiteElements();
             $check->save();
             $return = ["status" => true, "message" => "Saved successfully.", "data" => null];
         }

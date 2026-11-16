@@ -7,6 +7,13 @@
   data-assets-path="dashboard/assets/"
   data-template="vertical-menu-template-free"
 >
+  @php
+    $adminWebsiteElements = getWebsiteElements();
+    $adminLogo = $adminWebsiteElements['Logo'] ?? 'assets/images/logo1.png';
+    $adminLogoUrl = \Illuminate\Support\Str::startsWith($adminLogo, ['http://', 'https://'])
+      ? $adminLogo
+      : asset(ltrim($adminLogo, '/'));
+  @endphp
   @include("Dashboard.include.header")
 
   <body>

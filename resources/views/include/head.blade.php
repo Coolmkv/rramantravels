@@ -10,7 +10,17 @@
 <title>@yield('title','Jagannath Puri Affordable Tour Packages for You and Pilgrims')</title>
 
 <!-- Favicon -->
-<link rel="icon" href="assets/images/logo1.png" type="image/png">
+@php
+    $faviconLogo = getWebsiteElements()['Logo'] ?? null;
+    $faviconUrl = $faviconLogo
+        ? (
+            \Illuminate\Support\Str::startsWith($faviconLogo, ['http://', 'https://'])
+                ? $faviconLogo
+                : asset(ltrim($faviconLogo, '/'))
+        )
+        : "";
+@endphp
+<link rel="icon" href="{{ $faviconUrl }}" type="image/png">
 
 <!-- Google Font (optimized preload) -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +28,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Canonical -->
-<link rel="canonical" href="https://odishavoyages.com/">
+<link rel="canonical" href="{{ url('/') }}">
 
 <!-- LOCAL CSS (kept only necessary files) -->
 <link rel="stylesheet" href="{{ asset('assets/css/flaticon.min.css') }}">
@@ -51,10 +61,10 @@
   "@context": "https://schema.org/",
   "@type": "WebSite",
   "name": "odishavoyages",
-  "url": "https://odishavoyages.com/",
+  "url": "{{ url('/') }}",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://odishavoyages.com/tours{search_term_string}",
+    "target": "{{ url('tours') }}{search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
@@ -65,12 +75,12 @@
   "@context": "https://schema.org/",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem","position": 1,"name": "odishavoyages","item": "https://odishavoyages.com/"},
-    {"@type": "ListItem","position": 2,"name": "tours","item": "https://odishavoyages.com/tours"},
-    {"@type": "ListItem","position": 3,"name": "destinations","item": "https://odishavoyages.com/destinations"},
-    {"@type": "ListItem","position": 4,"name": "activitiespage","item": "https://odishavoyages.com/activitiespage"},
-    {"@type": "ListItem","position": 5,"name": "service-page","item": "https://odishavoyages.com/service-page"},
-    {"@type": "ListItem","position": 6,"name": "gallery","item": "https://odishavoyages.com/gallery"}
+    {"@type": "ListItem","position": 1,"name": "odishavoyages","item": "{{ url('/') }}"},
+    {"@type": "ListItem","position": 2,"name": "tours","item": "{{ url('tours') }}"},
+    {"@type": "ListItem","position": 3,"name": "destinations","item": "{{ url('destinations') }}"},
+    {"@type": "ListItem","position": 4,"name": "activitiespage","item": "{{ url('activitiespage') }}"},
+    {"@type": "ListItem","position": 5,"name": "service-page","item": "{{ url('service-page') }}"},
+    {"@type": "ListItem","position": 6,"name": "gallery","item": "{{ url('gallery') }}"}
   ]
 }
 </script>

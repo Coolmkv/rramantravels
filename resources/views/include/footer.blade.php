@@ -89,14 +89,9 @@ $destinations = DestinationsModel::where('status', '1')->get();
                     <p>
                         <i class="fas fa-phone"></i>
                         <strong>Contact No:</strong>
-                        <a href="tel:{!! $webElements['Phone_number1'] !!}">{!! $webElements['Phone_number1'] !!}</a>
+                        <a href="tel:{{ str_replace([' ', '-'], '', $webElements['Phone_number1'])  }}">{!! $webElements['Phone_number1'] !!}</a>
                     </p>
-                @else
-                    <p>
-                        <i class="fas fa-phone"></i>
-                        <strong>Contact No:</strong>
-                        <a href="tel:9899088497">9899088497</a>
-                    </p>
+                  
                 @endif
 
                 {{-- Dynamic Address with static fallback --}}

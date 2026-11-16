@@ -232,7 +232,7 @@
                         <img src="{{ 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         isset($home_aboutus_content_image) && !empty($home_aboutus_content_image)
         ? url($home_aboutus_content_image)
-        : 'https://odishavoyages.com/wp-content/uploads/2021/10/jagannath-temple-pti-1616946876.jpg' 
+        : '' 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     }}"
                             alt=" About Us Image"
                             class="absolute top-0 left-0 w-full h-full object-cover rounded-lg shadow-lg">
@@ -1091,7 +1091,7 @@
     <!-- Blog Area start -->
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="{{ asset('assets/css/homepage.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/homepage.css?v=1.0') }}">
 
     <!-- Testimonial Slider Section -->
     <div id="testimonialSlider" class="swiper"
@@ -1841,16 +1841,11 @@
                                     @if(isset($webElements['Phone_number1']))
                                         <p style="color:black;font-size:1.2rem;font-weight:bold">
                                             <i class="fas fa-phone"></i>
-                                            <a href="tel:{!! $webElements['Phone_number1'] !!}"
+                                            <a href="tel:{!! str_replace([' ', '-'], '', $webElements['Phone_number1']) !!}"
                                                 style="color:black;text-decoration:none">
                                                 {!! $webElements['Phone_number1'] !!}
                                             </a>
-                                        </p>
-                                    @else
-                                        <p style="color:black;font-size:1.2rem;font-weight:bold">
-                                            <i class="fas fa-phone"></i>
-                                            <a style="color:black;text-decoration:none" href="tel:9899088497">9899088497</a>
-                                        </p>
+                                        </p> 
                                     @endif
                                         
                                     <div class="mt-3">

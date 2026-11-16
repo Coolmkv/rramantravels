@@ -139,7 +139,7 @@
         <h1 class="text-center">Privacy Policy</h1>
 
         <h2>1. Introduction</h2>
-        <p>At <strong><a style="color:orange" href="https://odishavoyages.com/">odishavoyages.com</a></strong>, your privacy
+        <p>At <strong><a style="color:orange" href="https://rramantravels.com/">rramantravels.com</a></strong>, your privacy
             is our priority. This policy explains
             how we collect, use,
             and protect the information you provide while using our website.</p>
